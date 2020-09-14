@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: myapp_production
-  username: myapp
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  host: <%= ENV['PG_HOST'] %>
+  port: <%= ENV['PG_PORT'] %>
+  database: <%= ENV['PG_DATABASE'] %>
+  username: <%= ENV['PG_DATABASE_USERNAME'] %>
+  password: <%= ENV['PG_DATABASE_PASSWORD'] %>
